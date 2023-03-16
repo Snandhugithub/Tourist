@@ -1,0 +1,485 @@
+/ # hbase shell
+2023-03-16 18:03:51,418 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+HBase Shell; enter 'help<RETURN>' for list of supported commands.
+Type "exit<RETURN>" to leave the HBase Shell
+Version 1.3.2, r1bedb5bfbb5a99067e7bc54718c3124f632b6e17, Mon Mar 19 18:47:19 UTC 2018
+
+hbase(main):001:0> create 'tourism', 'details', 'bank details', 'accomudation'
+0 row(s) in 1.4210 seconds
+
+=> Hbase::Table - tourism
+hbase(main):002:0> list
+TABLE                                                                           
+tourism                                                                         
+1 row(s) in 0.0150 seconds
+
+=> ["tourism"]
+hbase(main):003:0> put 'tourism', '01', 'details:name', 'Ashok'
+0 row(s) in 0.1100 seconds
+
+hbase(main):004:0> put 'tourism', '01', 'details:phone no', '9987654321'
+0 row(s) in 0.0080 seconds
+
+hbase(main):005:0> put 'tourism', '01', 'details:age', '27'
+0 row(s) in 0.0060 seconds
+
+hbase(main):006:0> put 'tourism', '01', 'details:place to visit', 'paris'
+0 row(s) in 0.0050 seconds
+
+hbase(main):007:0> put 'tourism', '01', 'details:mode of transport', 'flight'
+0 row(s) in 0.0050 seconds
+
+hbase(main):008:0> put 'tourism', '01', 'details:no of days', '6'
+0 row(s) in 0.0050 seconds
+
+hbase(main):009:0> put 'tourism', '01', 'details:package price', '80000'
+0 row(s) in 0.0060 seconds
+
+hbase(main):010:0> put 'tourism', '01', 'bank details: bank name', 'SBI'
+0 row(s) in 0.0070 seconds
+
+hbase(main):011:0> put 'tourism', '01', 'bank details: account no', '6785432189076532'
+0 row(s) in 0.0090 seconds
+
+hbase(main):012:0> put 'tourism', '01', 'bank details: IFSC code', 'D672JGH59I'
+0 row(s) in 0.0060 seconds
+
+hbase(main):013:0> put 'tourism', '01', 'accomudation: hotel name', ' montalembert hotel' 
+0 row(s) in 0.0050 seconds
+
+hbase(main):014:0> put 'tourism', '01', 'accomudation: type of room', 'AC'
+0 row(s) in 0.0070 seconds
+
+hbase(main):015:0> put 'tourism', '01', 'accomudation: check in time', '5:30 am'
+0 row(s) in 0.0050 seconds
+hbase(main):017:0> put 'tourism', '01', 'accomudation: chectk out time', '12:00 pm'
+0 row(s) in 0.0050 seconds
+
+hbase(main):018:0> put 'tourism', '02', 'details:name', 'priya' 
+0 row(s) in 0.0040 seconds
+
+hbase(main):019:0> put 'tourism', '02', 'details:phone no', '8879654312'
+0 row(s) in 0.0060 seconds
+
+hbase(main):020:0> put 'tourism', '02', 'details:age', '33'
+0 row(s) in 0.0070 seconds
+
+hbase(main):021:0> put 'tourism', '02', 'details:place to visit', 'mysore'
+0 row(s) in 0.0050 seconds
+
+hbase(main):022:0> put 'tourism', '02', 'details:mode of transport', 'train'
+0 row(s) in 0.0080 seconds
+
+hbase(main):023:0> put 'tourism', '02', 'details:no of days', '3'
+0 row(s) in 0.0070 seconds
+
+hbase(main):024:0> put 'tourism', '02', 'details:package price', '5000'
+0 row(s) in 0.0050 seconds
+
+hbase(main):025:0> put 'tourism', '02', 'bank details:bank name', 'HDFC'
+0 row(s) in 0.0050 seconds
+
+hbase(main):026:0> put 'tourism', '02', 'bank details:account no', '7890654321897234'
+0 row(s) in 0.0050 seconds
+
+hbase(main):027:0> put 'tourism', '02', 'bank details:IFSC code', '89HR5K32K7'
+0 row(s) in 0.0060 seconds
+
+hbase(main):028:0> put 'tourism', '02', 'accomudation:hotel name', 'country inn'
+0 row(s) in 0.0050 seconds
+         
+hbase(main):031:0> put 'tourism', '02', 'accomudation: type of room ', 'NON AC'
+0 row(s) in 0.0050 seconds
+
+hbase(main):032:0> put 'tourism', '02', 'accomudation: check in time', '8:00pm'
+0 row(s) in 0.0050 seconds
+
+hbase(main):034:0> put 'tourism', '02', 'accomudation: check out time', '6:00pm'
+0 row(s) in 0.0080 seconds
+       
+hbase(main):038:0> put 'tourism', '03', 'details:name', 'krish'
+0 row(s) in 0.0070 seconds
+
+hbase(main):039:0> put 'tourism', '03', 'details:phone no', '7654389218'
+0 row(s) in 0.0070 seconds
+
+hbase(main):040:0> put 'tourism', '03', 'details:age', '45'
+0 row(s) in 0.0040 seconds
+
+hbase(main):041:0> put 'tourism', '03', 'details:place to visit', 'kumbagonam'
+0 row(s) in 0.0080 seconds
+
+hbase(main):042:0> put 'tourism', '03', 'details:mode of transport', 'sleeper bus'
+0 row(s) in 0.0040 seconds
+
+hbase(main):043:0> put 'tourism', '03', 'details:no of days', '2'
+0 row(s) in 0.0050 seconds
+
+hbase(main):044:0> put 'tourism', '03', 'details:package price', '3000'
+0 row(s) in 0.0050 seconds
+
+hbase(main):045:0> put 'tourism', '03', 'bank details: bank name', 'BOB'
+0 row(s) in 0.0060 seconds
+
+hbase(main):046:0> put 'tourism', '03', 'bank details: account no', '4356782198763546'
+0 row(s) in 0.0040 seconds
+
+hbase(main):047:0> put 'tourism', '03', 'bank details: IFSC code', 'H76Fdc5g8'
+0 row(s) in 0.0060 seconds
+
+hbase(main):048:0> put 'tourism', '03', 'accomudation: hotel name', 'kavaeri hotel'
+0 row(s) in 0.0050 seconds
+
+hbase(main):049:0> put 'tourism', '03', 'accomudation: type of room', 'AC'
+0 row(s) in 0.0050 seconds
+
+hbase(main):050:0> put 'tourism', '03', 'accomudation: check in time', '6:00 am'
+0 row(s) in 0.0060 seconds
+
+hbase(main):052:0' 
+hbase(main):053:0' put 'tourism', '03', 'accomudation: check in time', '6:00am’
+0row(s)in 0.0070 seconds
+hbase(main):054:0> put 'tourism', '03', 'accomudation: check out time', '3:54pm'
+0 row(s) in 0.0080 seconds
+
+hbase(main):055:0> get 'tourism', '01'
+COLUMN                CELL                                                      
+ accomudation: check  timestamp=1678990639749, value=5:30 am                    
+ in time                                                                        
+ accomudation: chectk timestamp=1678990738010, value=12:00 pm                   
+  out time                                                                      
+ accomudation: hotel  timestamp=1678990578478, value= montalembert hotel        
+ name                                                                           
+ accomudation: type o timestamp=1678990607185, value=AC                         
+ f room                                                                         
+ bank details: IFSC c timestamp=1678990419343, value=D672JGH59I                 
+ ode                                                                            
+ bank details: accoun timestamp=1678990373300, value=6785432189076532           
+ t no                                                                           
+ bank details: bank n timestamp=1678990319129, value=SBI                        
+ ame                                                                            
+ details:age          timestamp=1678990177403, value=27                         
+ details:mode of tran timestamp=1678990218798, value=flight                     
+ sport                                                                          
+ details:name         timestamp=1678990118500, value=Ashok                      
+ details:no of days   timestamp=1678990239963, value=6                          
+ details:package pric timestamp=1678990257737, value=80000                      
+ e                                                                              
+ details:phone no     timestamp=1678990162076, value=9987654321                 
+ details:place to vis timestamp=1678990199633, value=paris                      
+ it                                                                             
+1 row(s) in 0.0470 seconds
+
+hbase(main):056:0> get 'tourism', '02'
+COLUMN                CELL                                                      
+ accomudation: check  timestamp=1678991261804, value=8:00pm                     
+ in time                                                                        
+ accomudation: check  timestamp=1678991302310, value=6:00pm                     
+ out time                                                                       
+ accomudation: type o timestamp=1678991204579, value=NON AC                     
+ f room                                                                         
+ accomudation:hotel n timestamp=1678991117543, value=country inn                
+ ame                                                                            
+ bank details:IFSC co timestamp=1678991035430, value=89HR5K32K7                 
+ de                                                                             
+ bank details:account timestamp=1678990998371, value=7890654321897234           
+  no                                                                            
+ bank details:bank na timestamp=1678990966461, value=HDFC                       
+ me                                                                             
+ details:age          timestamp=1678990820524, value=33                         
+ details:mode of tran timestamp=1678990868257, value=train                      
+ sport                                                                          
+ details:name         timestamp=1678990790428, value=priya                      
+ details:no of days   timestamp=1678990895452, value=3                          
+ details:package pric timestamp=1678990916969, value=5000                       
+ e                                                                              
+ details:phone no     timestamp=1678990806593, value=8879654312                 
+ details:place to vis timestamp=1678990846255, value=mysore                     
+ it                                                                             
+1 row(s) in 0.0340 seconds
+
+hbase(main):057:0> get 'tourism', '03'
+COLUMN                CELL                                                      
+ accomudation: check  timestamp=1678991749149, value=6:00 am                    
+ in time                                                                        
+ accomudation: check  timestamp=1678991814241, value=3:54pm                     
+ out time                                                                       
+ accomudation: hotel  timestamp=1678991698989, value=kavaeri hotel              
+ name                                                                           
+ accomudation: type o timestamp=1678991728346, value=AC                         
+ f room                                                                         
+ bank details: IFSC c timestamp=1678991659060, value=H76Fdc5g8                  
+ ode                                                                            
+ bank details: accoun timestamp=1678991621440, value=4356782198763546           
+ t no                                                                           
+ bank details: bank n timestamp=1678991602943, value=BOB                        
+ ame                                                                            
+ details:age          timestamp=1678991477511, value=45                         
+ details:mode of tran timestamp=1678991533466, value=sleeper bus                
+ sport                                                                          
+ details:name         timestamp=1678991447269, value=krish                      
+ details:no of days   timestamp=1678991550002, value=2                          
+ details:package pric timestamp=1678991570918, value=3000                       
+ e                                                                              
+ details:phone no     timestamp=1678991466692, value=7654389218                 
+ details:place to vis timestamp=1678991501371, value=kumbagonam                 
+ it                                                                             
+1 row(s) in 0.0230 seconds
+
+hbase(main):058:0> scan 'tourism'
+ROW                   COLUMN+CELL                                               
+ 01                   column=accomudation: check in time, timestamp=167899063974
+                      9, value=5:30 am                                          
+ 01                   column=accomudation: chectk out time, timestamp=1678990738
+                      010, value=12:00 pm                                       
+ 01                   column=accomudation: hotel name, timestamp=1678990578478, 
+                      value= montalembert hotel                                 
+ 01                   column=accomudation: type of room, timestamp=1678990607185
+                      , value=AC                                                
+ 01                   column=bank details: IFSC code, timestamp=1678990419343, v
+                      alue=D672JGH59I                                           
+ 01                   column=bank details: account no, timestamp=1678990373300, 
+                      value=6785432189076532                                    
+ 01                   column=bank details: bank name, timestamp=1678990319129, v
+                      alue=SBI                                                  
+ 01                   column=details:age, timestamp=1678990177403, value=27     
+ 01                   column=details:mode of transport, timestamp=1678990218798,
+                       value=flight                                             
+ 01                   column=details:name, timestamp=1678990118500, value=Ashok 
+ 01                   column=details:no of days, timestamp=1678990239963, value=
+                      6                                                         
+ 01                   column=details:package price, timestamp=1678990257737, val
+                      ue=80000                                                  
+ 01                   column=details:phone no, timestamp=1678990162076, value=99
+                      87654321                                                  
+ 01                   column=details:place to visit, timestamp=1678990199633, va
+                      lue=paris                                                 
+ 02                   column=accomudation: check in time, timestamp=167899126180
+                      4, value=8:00pm                                           
+ 02                   column=accomudation: check out time, timestamp=16789913023
+                      10, value=6:00pm                                          
+ 02                   column=accomudation: type of room , timestamp=167899120457
+                      9, value=NON AC                                           
+ 02                   column=accomudation:hotel name, timestamp=1678991117543, v
+                      alue=country inn                                          
+ 02                   column=bank details:IFSC code, timestamp=1678991035430, va
+                      lue=89HR5K32K7                                            
+ 02                   column=bank details:account no, timestamp=1678990998371, v
+                      alue=7890654321897234                                     
+ 02                   column=bank details:bank name, timestamp=1678990966461, va
+                      lue=HDFC                                                  
+ 02                   column=details:age, timestamp=1678990820524, value=33     
+ 02                   column=details:mode of transport, timestamp=1678990868257,
+                       value=train                                              
+ 02                   column=details:name, timestamp=1678990790428, value=priya 
+ 02                   column=details:no of days, timestamp=1678990895452, value=
+                      3                                                         
+ 02                   column=details:package price, timestamp=1678990916969, val
+                      ue=5000                                                   
+ 02                   column=details:phone no, timestamp=1678990806593, value=88
+                      79654312                                                  
+ 02                   column=details:place to visit, timestamp=1678990846255, va
+                      lue=mysore                                                
+ 03                   column=accomudation: check in time, timestamp=167899174914
+                      9, value=6:00 am                                          
+ 03                   column=accomudation: check out time, timestamp=16789918142
+                      41, value=3:54pm                                          
+ 03                   column=accomudation: hotel name, timestamp=1678991698989, 
+                      value=kavaeri hotel                                       
+ 03                   column=accomudation: type of room, timestamp=1678991728346
+                      , value=AC                                                
+ 03                   column=bank details: IFSC code, timestamp=1678991659060, v
+                      alue=H76Fdc5g8                                            
+ 03                   column=bank details: account no, timestamp=1678991621440, 
+                      value=4356782198763546                                    
+ 03                   column=bank details: bank name, timestamp=1678991602943, v
+                      alue=BOB                                                  
+ 03                   column=details:age, timestamp=1678991477511, value=45     
+ 03                   column=details:mode of transport, timestamp=1678991533466,
+                       value=sleeper bus                                        
+ 03                   column=details:name, timestamp=1678991447269, value=krish 
+ 03                   column=details:no of days, timestamp=1678991550002, value=
+                      2                                                         
+ 03                   column=details:package price, timestamp=1678991570918, val
+                      ue=3000                                                   
+ 03                   column=details:phone no, timestamp=1678991466692, value=76
+                      54389218                                                  
+ 03                   column=details:place to visit, timestamp=1678991501371, va
+                      lue=kumbagonam                                            
+3 row(s) in 0.0650 seconds
+
+hbase(main):059:0> put 'tourism', '01', 'details:no of days', '9'
+0 row(s) in 0.0080 seconds
+
+hbase(main):060:0> get 'tourism', '01'
+COLUMN                CELL                                                      
+ accomudation: check  timestamp=1678990639749, value=5:30 am                    
+ in time                                                                        
+ accomudation: chectk timestamp=1678990738010, value=12:00 pm                   
+  out time                                                                      
+ accomudation: hotel  timestamp=1678990578478, value= montalembert hotel        
+ name                                                                           
+ accomudation: type o timestamp=1678990607185, value=AC                         
+ f room                                                                         
+ bank details: IFSC c timestamp=1678990419343, value=D672JGH59I                 
+ ode                                                                            
+ bank details: accoun timestamp=1678990373300, value=6785432189076532           
+ t no                                                                           
+ bank details: bank n timestamp=1678990319129, value=SBI                        
+ ame                                                                            
+ details:age          timestamp=1678990177403, value=27                         
+ details:mode of tran timestamp=1678990218798, value=flight                     
+ sport                                                                          
+ details:name         timestamp=1678990118500, value=Ashok                      
+ details:no of days   timestamp=1678991999384, value=9                          
+ details:package pric timestamp=1678990257737, value=80000                      
+ e                                                                              
+ details:phone no     timestamp=1678990162076, value=9987654321                 
+ details:place to vis timestamp=1678990199633, value=paris                      
+ it                                                                             
+1 row(s) in 0.0120 seconds
+
+hbase(main):061:0> put 'tourism', '02', 'bank details:branch', 'komarapalayam'
+0 row(s) in 0.0060 seconds
+
+hbase(main):062:0> get 'tourism', '02'
+COLUMN                CELL                                                      
+ accomudation: check  timestamp=1678991261804, value=8:00pm                     
+ in time                                                                        
+ accomudation: check  timestamp=1678991302310, value=6:00pm                     
+ out time                                                                       
+ accomudation: type o timestamp=1678991204579, value=NON AC                     
+ f room                                                                         
+ accomudation:hotel n timestamp=1678991117543, value=country inn                
+ ame                                                                            
+ bank details:IFSC co timestamp=1678991035430, value=89HR5K32K7                 
+ de                                                                             
+ bank details:account timestamp=1678990998371, value=7890654321897234           
+  no                                                                            
+ bank details:bank na timestamp=1678990966461, value=HDFC                       
+ me                                                                             
+ bank details:branch  timestamp=1678992162427, value=komarapalayam              
+ details:age          timestamp=1678990820524, value=33                         
+ details:mode of tran timestamp=1678990868257, value=train                      
+ sport                                                                          
+ details:name         timestamp=1678990790428, value=priya                      
+ details:no of days   timestamp=1678990895452, value=3                          
+ details:package pric timestamp=1678990916969, value=5000                       
+ e                                                                              
+ details:phone no     timestamp=1678990806593, value=8879654312                 
+ details:place to vis timestamp=1678990846255, value=mysore                     
+ it                                                                             
+1 row(s) in 0.0110 seconds
+
+hbase(main):063:0> delete 'tourism', '03', 'accomudation: type of room'
+0 row(s) in 0.0220 seconds
+
+hbase(main):064:0> get 'tourism', '03'
+COLUMN                CELL                                                      
+ accomudation: check  timestamp=1678991749149, value=6:00 am                    
+ in time                                                                        
+ accomudation: check  timestamp=1678991814241, value=3:54pm                     
+ out time                                                                       
+ accomudation: hotel  timestamp=1678991698989, value=kavaeri hotel              
+ name                                                                           
+ bank details: IFSC c timestamp=1678991659060, value=H76Fdc5g8                  
+ ode                                                                            
+ bank details: accoun timestamp=1678991621440, value=4356782198763546           
+ t no                                                                           
+ bank details: bank n timestamp=1678991602943, value=BOB                        
+ ame                                                                            
+ details:age          timestamp=1678991477511, value=45                         
+ details:mode of tran timestamp=1678991533466, value=sleeper bus                
+ sport                                                                          
+ details:name         timestamp=1678991447269, value=krish                      
+ details:no of days   timestamp=1678991550002, value=2                          
+ details:package pric timestamp=1678991570918, value=3000                       
+ e                                                                              
+ details:phone no     timestamp=1678991466692, value=7654389218                 
+ details:place to vis timestamp=1678991501371, value=kumbagonam                 
+ it                                                                             
+1 row(s) in 0.0110 seconds
+
+hbase(main):065:0> scan 'tourism'
+ROW                   COLUMN+CELL                                               
+ 01                   column=accomudation: check in time, timestamp=167899063974
+                      9, value=5:30 am                                          
+ 01                   column=accomudation: chectk out time, timestamp=1678990738
+                      010, value=12:00 pm                                       
+ 01                   column=accomudation: hotel name, timestamp=1678990578478, 
+                      value= montalembert hotel                                 
+ 01                   column=accomudation: type of room, timestamp=1678990607185
+                      , value=AC                                                
+ 01                   column=bank details: IFSC code, timestamp=1678990419343, v
+                      alue=D672JGH59I                                           
+ 01                   column=bank details: account no, timestamp=1678990373300, 
+                      value=6785432189076532                                    
+ 01                   column=bank details: bank name, timestamp=1678990319129, v
+                      alue=SBI                                                  
+ 01                   column=details:age, timestamp=1678990177403, value=27     
+ 01                   column=details:mode of transport, timestamp=1678990218798,
+                       value=flight                                             
+ 01                   column=details:name, timestamp=1678990118500, value=Ashok 
+ 01                   column=details:no of days, timestamp=1678991999384, value=
+                      9                                                         
+ 01                   column=details:package price, timestamp=1678990257737, val
+                      ue=80000                                                  
+ 01                   column=details:phone no, timestamp=1678990162076, value=99
+                      87654321                                                  
+ 01                   column=details:place to visit, timestamp=1678990199633, va
+                      lue=paris                                                 
+ 02                   column=accomudation: check in time, timestamp=167899126180
+                      4, value=8:00pm                                           
+ 02                   column=accomudation: check out time, timestamp=16789913023
+                      10, value=6:00pm                                          
+ 02                   column=accomudation: type of room , timestamp=167899120457
+                      9, value=NON AC                                           
+ 02                   column=accomudation:hotel name, timestamp=1678991117543, v
+                      alue=country inn                                          
+ 02                   column=bank details:IFSC code, timestamp=1678991035430, va
+                      lue=89HR5K32K7                                            
+ 02                   column=bank details:account no, timestamp=1678990998371, v
+                      alue=7890654321897234                                     
+ 02                   column=bank details:bank name, timestamp=1678990966461, va
+                      lue=HDFC                                                  
+ 02                   column=bank details:branch, timestamp=1678992162427, value
+                      =komarapalayam                                            
+ 02                   column=details:age, timestamp=1678990820524, value=33     
+ 02                   column=details:mode of transport, timestamp=1678990868257,
+                       value=train                                              
+ 02                   column=details:name, timestamp=1678990790428, value=priya 
+ 02                   column=details:no of days, timestamp=1678990895452, value=
+                      3                                                         
+ 02                   column=details:package price, timestamp=1678990916969, val
+                      ue=5000                                                   
+ 02                   column=details:phone no, timestamp=1678990806593, value=88
+                      79654312                                                  
+ 02                   column=details:place to visit, timestamp=1678990846255, va
+                      lue=mysore                                                
+ 03                   column=accomudation: check in time, timestamp=167899174914
+                      9, value=6:00 am                                          
+ 03                   column=accomudation: check out time, timestamp=16789918142
+                      41, value=3:54pm                                          
+ 03                   column=accomudation: hotel name, timestamp=1678991698989, 
+                      value=kavaeri hotel                                       
+ 03                   column=bank details: IFSC code, timestamp=1678991659060, v
+                      alue=H76Fdc5g8                                            
+ 03                   column=bank details: account no, timestamp=1678991621440, 
+                      value=4356782198763546                                    
+ 03                   column=bank details: bank name, timestamp=1678991602943, v
+                      alue=BOB                                                  
+ 03                   column=details:age, timestamp=1678991477511, value=45     
+ 03                   column=details:mode of transport, timestamp=1678991533466,
+                       value=sleeper bus                                        
+ 03                   column=details:name, timestamp=1678991447269, value=krish 
+ 03                   column=details:no of days, timestamp=1678991550002, value=
+                      2                                                         
+ 03                   column=details:package price, timestamp=1678991570918, val
+                      ue=3000                                                   
+ 03                   column=details:phone no, timestamp=1678991466692, value=76
+                      54389218                                                  
+ 03                   column=details:place to visit, timestamp=1678991501371, va
+                      lue=kumbagonam                                            
+3 row(s) in 0.0330 seconds
+
+hbase(main):066:0>
